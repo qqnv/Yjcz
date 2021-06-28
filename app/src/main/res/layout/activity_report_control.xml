@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/main_bg">
+
+    <include layout="@layout/include_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_department"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp_16"
+            android:text="部门"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp_16"
+            android:text="报班人"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_reportTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp_16"
+            android:text="报班时间"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_types"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp_16"
+            android:text="班次"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_report"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_report"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

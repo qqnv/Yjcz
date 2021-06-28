@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zzlecheng.yjcz">
+    <!-- Required -->
+    <permission
+        android:name="com.zzlecheng.yjcz.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--外存储读权限，构建语法需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.zzlecheng.yjcz.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!--视频录制权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 富媒体需要声明的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+
+    <!-- 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名-->
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.zzlecheng.yjcz" />
+    <permission
+        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.zzlecheng.yjcz"
+        android:protectionLevel="signature"></permission>
+
+    <!--录音-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!--免提-->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <!--主页跳转的activity-->
+        <activity android:name=".activity.ReportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"  />
+        <activity android:name=".activity.ReportControlActivity" />
+        <activity android:name=".activity.EmergencyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ClusterSchedulingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.EmergencyDrillActivity"
+            android:screenOrientation="portrait"/>
+        <!--侧滑导航跳转的activity-->
+        <activity android:name=".activity.PersonalActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ChangePassWordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AboutUsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SwitchAccountActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.ChangeIpActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ProcedureActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.CommentActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.VideoRecordingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.VideoRecordChatActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.VideoPlayActivity"
+            android:screenOrientation="portrait"/>
+        <!--流程节点-->
+        <activity android:name=".activity.ProcedureSeeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ProcedureOperationActivity"
+            android:screenOrientation="portrait"/>
+        <!--树结构-->
+        <activity android:name=".activity.LocationTreeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"  />
+        <!--集群调度相关界面-->
+        <activity android:name=".activity.ClusterSetActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ClusterCallActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ClusterCallOneActivity"/>
+        <activity android:name=".activity.ClusterCallMoreActivity"/>
+
+        <!--极光推送接服务接收类-->
+        <receiver
+            android:name=".receiver.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /><!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /><!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /><!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.zzlecheng.yjcz" />
+            </intent-filter>
+        </receiver>
+
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name="com.zzlecheng.yjcz.receiver.MyPushServiceReceiver" >
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- push service start -->
+        <!-- 用于接收系统消息以保证PushService正常运行 -->
+        <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <!-- Push服务接收客户端发送的各种请求-->
+        <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.baidu.android.pushservice.PushService" android:exported="true"
+            android:process=":bdservice_v1" >
+            <intent-filter >
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <!-- 4.4版本新增的CommandService声明，提升小米和魅族手机上的实际推送到达率 -->
+        <service android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+
+        <!-- 适配Android N系统必需的ContentProvider声明，写权限包含应用包名-->
+        <provider
+            android:name="com.baidu.android.pushservice.PushInfoProvider"
+            android:authorities="com.zzlecheng.yjcz.bdpush"
+            android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.zzlecheng.yjcz"
+            android:protectionLevel = "signature"
+            android:exported="true" />
+
+
+
+        <!-- push结束 -->
+
+
+    </application>
+
+</manifest>

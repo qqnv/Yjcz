@@ -1,0 +1,76 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/login_background</item>
+        <item name="colorPrimaryDark">@color/login_background</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--首页model样式-->
+    <style name="modelStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">#33000000</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">@dimen/dp_22</item>
+    </style>
+
+    <!--首页侧滑导航字体样式-->
+    <style name="slidingStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_20</item>
+        <item name="android:drawableRight">@drawable/ic_right</item>
+        <item name="android:drawablePadding">@dimen/dp_120</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <!--首页侧滑分割线样式-->
+    <style name="slidStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#333</item>
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+    </style>
+    <!--首页报班弹框样式-->
+    <style name="PopupWindowStyle">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+
+    <!--首页退班弹框样式-->
+    <style name="DialogStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!--系统所有上传按钮-->
+    <style name="updateStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:layout_marginLeft">@dimen/dp_50</item>
+        <item name="android:layout_marginRight">@dimen/dp_50</item>
+        <item name="android:layout_marginTop">@dimen/dp_20</item>
+        <item name="android:background">@drawable/border_sure</item>
+        <item name="android:text">@string/commit</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--Tree树-->
+    <style name="listviewstyle">
+        <item name="android:cacheColorHint">@null</item>
+        <item name="android:divider">@color/line_color</item>
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:scrollbarThumbVertical">@color/titlecolor</item>
+        <item name="android:scrollbarSize">2dp</item>
+    </style>
+
+</resources>

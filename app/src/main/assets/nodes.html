@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css"></link>
+    <link rel="stylesheet" href="zdy.css"></link>
+    <link rel="stylesheet" href="nodes.css"></link>
+    <link rel="stylesheet" href="yalc.css"></link>
+
+</head>
+<body>
+    <div class="frame">
+        <div class="lctxz">
+            <div id="divs">
+                <el-popover class="modle modle-zdy" v-for="post in nodes" v-bind:key="post.id"
+                            v-bind:id="post.id"
+                            v-bind:style="{top:(post.nodex * scaling)+'px', left:(post.nodey * scaling)+'px'}"
+                            trigger="click" placement="right-end">
+
+                    <el-button slot="reference">{{post.nodename}}</el-button>
+                </el-popover>
+                <lc-line v-for="line in lines" v-bind:key="'line-'+line.sunNode.id+line.parentNode.id"
+                         v-bind:sun-node="line.sunNode" v-bind:parent-node="line.parentNode"
+                         v-bind:scaling="scaling"></lc-line>
+             </div>
+
+
+        </div>
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="vue-resource.min.js"></script>
+    <script src="index.js"></script>
+    <template id="lcLine">
+        <div>
+            <!-- 上线 -->
+            <div :style="{top:topLineTop +'px' ,left:topLineLeft +'px',height:topLineHeight +'px',width:'2px'}"
+                 class="line"></div>
+            <!-- 下线 -->
+            <div :style="{top:bottomLineTop +'px' ,left:bottomLineLeft +'px',height:bottomLineHeight +'px',width:'2px'}"
+                 class="line"></div>
+            <!-- 横线 -->
+            <div :style="{top:rightLineTop +'px' ,left:rightLineLeft +'px',width:rightLineWidth +'px',height:'2px'}"
+                 class="line"></div>
+            <img :style="{top:imgTop+'px', left:imgLeft+'px',width: '20px', height: '20px'}"
+                 class="img"
+                 src="jt.png"/>
+        </div>
+    </template>
+
+    <script>
+
+        var lcLine = {
+            template: "#lcLine" ,
+            name:'lcLine',
+            data () {
+                return {
+                    offsetX:80,//X轴起始偏移量
+                    offsetY:100,//X轴起始偏移量
+                    /* lineHeight:90,//一个单元  线的高度
+                    lineWidth:240,//一个单元  线的宽度 */
+                    nodeHeight:80,//节点高度
+                    nodeWidth:160,//节点宽度
+                    topLineTop:0, //上线的 X轴起点位置
+                    topLineLeft:0,//上线的 Y轴起点位置
+                    topLineHeight:0,//上线的高度
+                    bottomLineTop:0, //下线的 X轴起点位置
+                    bottomLineLeft:0,//下线的 Y轴起点位置
+                    bottomLineHeight:0,//下线的高度
+                    rightLineTop:0, //横线的 X轴起点位置
+                    rightLineLeft:0,//横线的 Y轴起点位置
+                    rightLineWidth:0,//横线的宽度
+                    imgTop: 0,//图片X轴起点位置
+                    imgLeft: 0//图片Y轴起点位置
+                  }
+            },
+            props: {
+                 sunNode: {
+                    default:function () {
+                        return {  }
+                    },
+                    type: Object
+                 },
+                 parentNode:{
+                    default:function () {
+                        return {  }
+                    },
+                    type: Object
+                 },
+                 scaling :{//缩放比例
+                    default:function(){
+                        return 120
+                    },
+                    type:Number
+                 }
+
+            },
+            mounted:function() { // 实例化editor编辑器
+                this.line();
+            },
+            methods : {
+                line:function(){
+                    var xp = this.parentNode.nodex * this.scaling; //起始x坐标
+                    var yp = this.parentNode.nodey * this.scaling ; //起始y坐标
+                    var x = this.sunNode.nodex * this.scaling ; //结束x坐标
+                    var y = this.sunNode.nodey * this.scaling ; //结束y坐标
+
+                    this.topLineLeft = yp + this.offsetY ; //上线的 X轴起点位置
+                    this.topLineTop = xp + this.offsetX;//上线的 Y轴起点位置
+                    this.topLineHeight =  (x - xp) / 3 ;//上线的高度
+
+                    this.bottomLineLeft = y + this.offsetY; //下线的 X轴起点位置
+                    this.bottomLineTop = this.topLineTop + this.topLineHeight ;//下线的 Y轴起点位置
+                    this.bottomLineHeight  = 2 * (x - xp) / 3;//下线的高度
+
+
+                    if(y - yp > 0){//如果子节点在父节点右边
+                        this.rightLineTop = this.bottomLineTop;//横线的 X轴起点位置
+                        this.rightLineLeft = this.topLineLeft ;//横线的 Y轴起点位置
+                    }else{
+                        this.rightLineTop = this.bottomLineTop;//横线的 X轴起点位置
+                        this.rightLineLeft = this.bottomLineLeft ;//横线的 Y轴起点位置
+                    }
+                    this.rightLineWidth = Math.abs ( y - yp);//横线的宽度
+                    this.imgTop = this.bottomLineTop + this.bottomLineHeight - 28 - this.nodeHeight/2;
+                    this.imgLeft = this.bottomLineLeft - 9.5;
+                }
+            },
+            destroyed : function () {
+            }
+        }
+        Vue.component('lcLine',lcLine);
+
+         </script>
+
+    <script src="nodes.js"></script>
+</body>
+</html>

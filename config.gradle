@@ -1,0 +1,98 @@
+ext {
+    compileSdkVersion = 27
+    applicationId = "com.zzlecheng.yjcz"
+    minSdkVersion = 19
+    targetSdkVersion = 27
+    versionCode = 1
+    versionName = "1.0"
+    testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+
+    appcompatVersion = "27.1.1"
+    constraintVersion = "1.1.2"
+    junitVersion = "4.12"
+    runnerVersion = "1.0.2"
+
+    tabContainerViewVersion = "v1.0.4"
+    butterKnifeVersion = "8.8.1"
+    espressoVersion = "3.0.2"
+    rxjava2Version = "2.1.14"
+    rxandroidVersion = "2.0.2"
+    converterGsonVersion = "2.4.0"
+    adapterRxJava2Version = "2.4.0"
+    scalarsVersion = "2.0.0"
+    timePickerVersion = "4.1.9"
+    rxLifeCycleVersion = "2.2.1"
+    rxLifeCycleAndroidVersion = "2.2.1"
+    rxLifeCycleComponentsVersion = "2.2.1"
+    eventBusVersion = "3.1.1"
+    retrofitVersion = "2.4.0"
+    loggingInterceptorVersion = "3.9.1"
+    gsonVersion = "2.8.5"
+    updateVersion = "3.5.2"
+    okhttpUtilsVersion = "3.8.0"
+    okGoVerison = "3.0.4"
+    qrCodeVersion = "2.2"
+    niceImageViewVersion = "1.0.1"
+    jpushVersion = "3.1.5"
+    jcoreVersion = "1.2.3"
+    smartRefreshLayoutVersion = "1.0.3"
+    smartRefreshHeaderVersion = "1.0.3"
+    baseRecyclerVeiwAdapterVersion = "2.9.38"
+    constraintVersion = "1.1.3"
+    runnerVersion = "1.0.2"
+    frescoVersion = "1.3.0"
+    timeselectorVersion = "4.1.6"
+    permissionCheckerVersion = "0.0.1-beta2"
+    fastjsonVersion = "1.2.73"
+
+    appDependency = [
+            appcompat              : "com.android.support:appcompat-v7:${appcompatVersion}",
+            support                : "com.android.support:support-v4:${appcompatVersion}",
+            recyclerview           : "com.android.support:recyclerview-v7:${appcompatVersion}",
+            constraint             : "com.android.support.constraint:constraint-layout:${constraintVersion}",
+            junit                  : "junit:junit:${junitVersion}",
+            runner                 : "com.android.support.test:runner:${runnerVersion}",
+            //底部导航栏
+            tabContainerView       : "com.github.zhaolei9527:UseBottomTabBar:${tabContainerViewVersion}",
+            //butterKnife
+            butterKnife            : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            butterKnifeCompiler    : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+            espresso               : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+            //rx2 系列
+            rxjava                 : "io.reactivex.rxjava2:rxjava:${rxjava2Version}",
+            rxandroid              : "io.reactivex.rxjava2:rxandroid:${rxandroidVersion}",
+            converterGson          : "com.squareup.retrofit2:converter-gson:${converterGsonVersion}",
+            adapterRxjava2         : "com.squareup.retrofit2:adapter-rxjava2:${adapterRxJava2Version}",
+            scalars                : "com.squareup.retrofit2:converter-scalars:${scalarsVersion}",
+            timePicker             : "com.contrarywind:Android-PickerView:${timePickerVersion}",
+            rxLifeCycle            : "com.trello.rxlifecycle2:rxlifecycle:${rxLifeCycleVersion}",
+            rxLifeCycleAndroid     : "com.trello.rxlifecycle2:rxlifecycle-android:${rxLifeCycleAndroidVersion}",
+            rxLifeCycleComponents  : "com.trello.rxlifecycle2:rxlifecycle-components:${rxLifeCycleComponentsVersion}",
+            eventBus               : "org.greenrobot:eventbus:${eventBusVersion}",
+            //retrofit
+            retrofit               : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            loggingInterceptor     : "com.squareup.okhttp3:logging-interceptor:${loggingInterceptorVersion}",
+            gson                   : "com.google.code.gson:gson:${gsonVersion}",
+            //app更新框架及二维码生成
+            update                 : "com.qianwen:update-app:${updateVersion}",
+            okhttpUtils            : "com.qianwen:okhttp-utils:${okhttpUtilsVersion}",
+            okGo                   : "com.lzy.net:okgo:${okGoVerison}",
+            qrCode                 : "cn.yipianfengye.android:zxing-library:${qrCodeVersion}",
+            //方形图片变圆形
+            niceImageView          : "com.github.Othershe:NiceImageView:${niceImageViewVersion}",
+            //极光推送
+            jpush                  : "cn.jiguang.sdk:jpush:${jpushVersion}",
+            jcore                  : "cn.jiguang.sdk:jcore:${jcoreVersion}",
+            //refreshLayout
+            smartRefreshLayout     : "com.scwang.smartrefresh:SmartRefreshLayout:${smartRefreshLayoutVersion}",
+            smartRefreshHead       : "com.scwang.smartrefresh:SmartRefreshHeader:${smartRefreshHeaderVersion}",
+            baseRecyclerVeiwAdapter: "com.github.CymChad:BaseRecyclerViewAdapterHelper:${baseRecyclerVeiwAdapterVersion}",
+            //侧滑导航
+            fresco                 : "com.facebook.fresco:fresco:${frescoVersion}",
+            //时间选择器
+            timeselector           : "com.contrarywind:Android-PickerView:${timePickerVersion}",
+            degsion                : "com.android.support:design:${appcompatVersion}",
+            permissionChecker      : "com.werb.permissionschecker:permissionschecker:${permissionCheckerVersion}",
+            fastjson               : "com.alibaba:fastjson:${fastjsonVersion}"
+    ]
+}

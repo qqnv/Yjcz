@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:background="@color/login_background"
+        android:padding="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_portrait"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            fresco:roundAsCircle="true"
+            fresco:placeholderImage="@mipmap/icon"
+            android:padding="@dimen/dp_2"
+            android:layout_marginLeft="@dimen/dp_10"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_16"
+            android:textColor="#fff"
+            android:layout_centerInParent="true"
+            android:text="@string/app_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_bb"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_16"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:text="@string/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_12"/>
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/main_bg">
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/ll_homeMessages"
+                style="@style/modelStyle">
+                <ImageView
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:src="@mipmap/xiaoxizhognxin"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/message"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_homeReport"
+                style="@style/modelStyle">
+                <ImageView
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:src="@mipmap/shijianshangbao"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/report"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/ll_homeSignIn"
+                style="@style/modelStyle">
+                <ImageView
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:src="@mipmap/zhibanqiandao"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_in"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_homeDrill"
+                style="@style/modelStyle">
+                <ImageView
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:src="@mipmap/yingjiyuan"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/drill"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+
+            android:layout_marginBottom="@dimen/dp_40">
+            <LinearLayout
+                android:id="@+id/ll_homeEmergency"
+                style="@style/modelStyle">
+                <ImageView
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:src="@mipmap/yingjichizhi"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emergency"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_homeLaunchPlan"
+                style="@style/modelStyle">
+                <ImageView
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:src="@mipmap/fabuyuan"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cluster_scheduling"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

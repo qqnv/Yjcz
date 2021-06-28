@@ -1,0 +1,81 @@
+<resources>
+    <!--系统公用-->
+    <string name="app_name">应急处置</string>
+    <string name="app_full_name">应急联动处置及演练系统</string>
+    <string name="title">标题</string>
+    <string name="sure">确认</string>
+    <string name="cancel">取消</string>
+    <string name="username">账号：</string>
+    <string name="password">密码：</string>
+    <string name="login">登录</string>
+    <string name="ip">IP设置</string>
+    <string name="ip_input">请输入IP</string>
+    <string name="dkh">端口号</string>
+    <string name="dkh_input">请输入端口号</string>
+    <string name="commit">提交</string>
+    <!--侧滑导航-->
+    <string name="mine">个人中心</string>
+    <string name="change_pwd">修改密码</string>
+    <string name="message">消息中心</string>
+    <string name="version_update">检查更新</string>
+    <string name="about_us">关于我们</string>
+    <string name="switch_account">切换IP       </string>
+    <string name="sign_out">退出</string>
+    <string name="skin_peeler">换肤</string>
+    <!--首页各模块-->
+    <string name="report">事件上报</string>
+    <string name="sign_in">值班签到</string>
+    <string name="drill">应急演练</string>
+    <string name="emergency">应急处置</string>
+    <string name="cluster_scheduling">集群调度</string>
+    <string name="launch_plan">发布预案</string>
+    <!--首页报班-->
+    <string name="loading">加载中</string>
+    <string name="bb">报班</string>
+    <string name="ybqtb">已报全天班</string>
+    <string name="ybbb">已报白班</string>
+    <string name="ybyb">已报夜班</string>
+    <!--个人信息-->
+    <string name="portrait">头像</string>
+    <string name="name">姓名</string>
+    <string name="sex">性别</string>
+    <string name="company">单位</string>
+    <string name="department">部门</string>
+    <string name="position">职位</string>
+    <string name="local_photo">从相册选择</string>
+    <string name="shooting">拍照</string>
+    <!--密码管理-->
+    <string name="old_pwd">旧密码</string>
+    <string name="input_old_pwd">请输入旧密码</string>
+    <string name="new_pwd">新密码</string>
+    <string name="input_new_pwd">请输入新密码</string>
+    <string name="sure_input_new_pwd">请确认新密码</string>
+    <string name="differ">* 两次输入的密码不一致！</string>
+    <!--事件上报-->
+    <string name="fssj">发生时间：</string>
+    <string name="fssj_">请选择发生时间</string>
+    <string name="sbsj">上报时间：</string>
+    <string name="sbsj_">请选择上报时间</string>
+    <string name="sbwz">上报位置：</string>
+    <string name="sbwz_">请选择上报位置</string>
+    <string name="jtwz">具体位置：</string>
+    <string name="jtwz_">请填写具体位置</string>
+    <string name="tjzp">添加照片：</string>
+    <string name="ms">事件描述：</string>
+    <string name="ms_">请填写描述</string>
+    <string name="sb">上报</string>
+    <!--流程模块-->
+    <string name="cllc">处理流程</string>
+    <string name="lc">流程</string>
+    <string name="gjd">关键点</string>
+    <!--集群调度-->
+    <string name="cluster_set">调度设置</string>
+    <string name="u_name">用户名</string>
+    <string name="u_name_input">请输入用户名</string>
+    <string name="u_pwd">用户密码</string>
+    <string name="u_pwd_input">请输入用户密码</string>
+    <string name="resolution">分辨率</string>
+    <string name="auto_answer">自动接听</string>
+    <string name="bitrate">比特率</string>
+    <string name="fps">帧数</string>
+</resources>

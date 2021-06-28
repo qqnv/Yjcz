@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--定义原来矩形4个直角的完全程度（与width/heigth一致则为圆角）-->
+    <corners
+        android:radius="@dimen/dp_16"/>
+    <!--中间填充颜色-->
+    <solid
+        android:color="#ff876968"/>
+    <!--RadioButton的大小-->
+    <size
+        android:height="@dimen/dp_16"
+        android:width="@dimen/dp_16"/>
+    <!--边框属性-->
+    <stroke
+        android:width="1dp"
+        android:color="@color/white"/>
+</shape>

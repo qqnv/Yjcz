@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextureView
+        android:id="@+id/surface"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/tv_updates"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="上传视频"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/select_sure"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:visibility="gone"/>
+        <!-- 开始/结束 录制按钮 -->
+        <TextView
+            android:id="@+id/record_control"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:onClick="control"
+            android:text="开始录制"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/select_sure"
+            android:gravity="center_vertical"/>
+
+        <Chronometer
+            android:id="@+id/record_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:format="%s"
+            android:textColor="@color/select_sure"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"/>
+    </RelativeLayout>
+
+</RelativeLayout>

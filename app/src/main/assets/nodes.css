@@ -1,0 +1,17 @@
+.modle {
+	border: 1px;
+	height: 42px;
+	float: left;
+	position: absolute;
+	background-color: Silver;
+	border-radius: 4px;
+}
+.line {
+	border: 1px;
+	background-color: #000000;
+	position: absolute;
+	z-index: -9999;
+}
+.img {
+	position: absolute;
+}

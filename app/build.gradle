@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner rootProject.ext.testInstrumentationRunner
+
+        //jcenter自动集成极光推送
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi-v7a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64','armeabi','arm64-v8a'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "74c03744e28bc9e540288fbc", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //Java8 lambda的使用
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    def appDependency = rootProject.ext.appDependency
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation appDependency.appcompat
+    implementation appDependency.support
+    implementation appDependency.recyclerview
+    implementation appDependency.constraint
+    testImplementation appDependency.junit
+    androidTestImplementation appDependency.runner
+    androidTestImplementation appDependency.espresso
+    //底部导航栏
+    implementation appDependency.tabContainerView
+    //butterKnife
+    api appDependency.butterKnife
+    annotationProcessor appDependency.butterKnifeCompiler
+    androidTestImplementation appDependency.espresso
+    //rx2 系列
+    implementation appDependency.rxjava
+    implementation appDependency.rxandroid
+    implementation appDependency.converterGson
+    implementation appDependency.adapterRxjava2
+    implementation appDependency.scalars
+    implementation appDependency.timePicker
+    implementation appDependency.rxLifeCycle
+    implementation appDependency.rxLifeCycleAndroid
+    implementation appDependency.rxLifeCycleComponents
+    implementation appDependency.eventBus
+    //retrofit
+    implementation appDependency.retrofit
+    implementation appDependency.loggingInterceptor
+    implementation appDependency.gson
+    //app更新框架及二维码生成
+    implementation appDependency.update
+    implementation appDependency.okGo
+    implementation appDependency.qrCode
+    //方形图片变圆形
+    implementation appDependency.niceImageView
+    //极光推送
+    implementation appDependency.jpush
+    implementation appDependency.jcore
+    //refreshLayout
+    implementation appDependency.smartRefreshLayout
+    implementation appDependency.smartRefreshHead
+    implementation appDependency.baseRecyclerVeiwAdapter
+    //侧滑导航
+    api appDependency.fresco
+    api project(path: ':sliding_menu')
+    //时间选择器
+    implementation appDependency.timeselector
+    implementation appDependency.okhttpUtils
+    implementation appDependency.degsion
+    implementation files('libs/pushservice-6.5.0.75.jar')
+    //检查权限
+    implementation appDependency.permissionChecker
+    //图片网格布局
+    implementation 'com.github.goyourfly:multi_picture_view:1.3.1'
+    //项目方法太多
+    implementation 'com.android.support:multidex:1.0.3'
+    //集群调度
+    implementation files('libs/armeabi-v7a/mediaengine.jar')
+    implementation files('libs/armeabi-v7a/Ice.jar')
+
+    implementation appDependency.fastjson
+}

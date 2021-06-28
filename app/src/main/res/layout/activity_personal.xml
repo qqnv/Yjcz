@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/main_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_header"
+        layout="@layout/include_header"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_portrait"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="@string/portrait"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+        <com.othershe.library.NiceImageView
+            android:id="@+id/nv_portrait"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_40"
+            android:src="@mipmap/icon"
+            android:scaleType="centerCrop"
+            app:is_circle="true"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/select_line"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_username"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="@string/name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_40"
+            android:text="程序员"
+            android:textColor="@color/list_hint"
+            android:textSize="@dimen/sp_14"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/select_line"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_sex"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="@string/sex"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_50"
+            android:text="男"
+            android:textColor="@color/list_hint"
+            android:textSize="@dimen/sp_14" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_8"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/select_line"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_company"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="@string/company"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_20"
+            android:text="郑州乐程"
+            android:textColor="@color/list_hint"
+            android:textSize="@dimen/sp_15"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/v_company"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/select_line"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_department"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="@string/department"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_20"
+            android:text="研发部门"
+            android:textColor="@color/list_hint"
+            android:textSize="@dimen/sp_14"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/v_department"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/select_line"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_position"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="@string/position"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_40"
+            android:text="研发工程师"
+            android:textColor="@color/list_hint"
+            android:textSize="@dimen/sp_15"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/select_line"/>
+    <Button
+        android:id="@+id/btn_signOut"
+        style="@style/updateStyle"
+        android:text="@string/sign_out"/>
+
+</LinearLayout>

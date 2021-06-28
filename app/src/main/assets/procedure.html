@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Carson_Ho</title>
+
+
+    // JS代码
+    <script>
+   function callJS(){
+      alert("Android调用了JS的callJS方法");
+   }
+   function callAndroid(){
+      document.location = "js://webview?arg1=111&arg2=222";
+   }
+   function postStr(){
+	    var rtn = demo.testMethod(document.getElementById("text").value, document.getElementById("text1").value);
+	    document.getElementById("text2").value=rtn;
+	}
+
+    </script>
+
+</head>
+
+<body>
+<!--<button type="button" id="button1" onclick="callAndroid()">点击调用Android代码</button>-->
+<form action="">
+    <p><div id="info" >向Android传递两个实参，并取得返回值</div></p>
+    <p><input type="text" id="text" value="实参一"/></p>
+    <p><input type="text" id="text1" value="实参二"/></p>
+    <p><input type="text" id="text2" value="返回值"/></p>
+    <p><input type="button" id="btn_post" onclick="postStr()" value="发送消息至android"/></p>
+</form>
+</body>
+
+</html>
